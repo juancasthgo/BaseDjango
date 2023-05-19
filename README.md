@@ -1,1 +1,1 @@
-# BaseDjango
+# BaseDjango Para Proyectos
