@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnomarket</title>
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    <title>Music Pro</title>
     {% load static %}
     {% block css %}
     {% endblock %}
     <link rel="stylesheet" href="{% static 'app/css/estilos.css' %}">
     
 </head>
-<body>
+<body style="background-color: rgba(0, 0, 0, 0.445);">
 
     <hr>
-    <header id="header">
+    <header id="header" style="background-color: black;">
         <img class="menu" src="{% static 'app/img/menuiconwhite.png' %}" alt="menu" id="menu">
-        <div class="contenedor_logo">
-            <img  class="logo"  src="{% static 'app/img/tecnomarketpngicono.png' %}" alt="logo">
+        <div class="contenedor_logo">  
+            <img  class="logo"  src="{% static 'app/img/logo.png' %}" alt="logo">
         </div>
 
         <div>
             
-            <nav id="nav">
+            <nav id="nav" style="background-color: black;">
                 <ul>
                     <li>
                         <a href="{% url 'home' %}"> Inicio </a>
