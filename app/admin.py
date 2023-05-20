@@ -10,7 +10,13 @@ class ProductoAdmin(admin.ModelAdmin):
     list_filter = ["marca"]
     list_per_page =  10
 
-
+# MODELO VISUALIZAR CONTACTO.
+class ContactoProductoEdit(admin.ModelAdmin):
+    list_display = ["nombre","correo","tipo_consulta","mensaje"]
+    list_editable = ["mensaje"]
+    search_fields = ["correo","nombre"]
+    list_per_page =  10
+    
 admin.site.register(Marca)
 admin.site.register(Producto, ProductoAdmin)
-admin.site.register(Contacto)
+admin.site.register(Contacto, ContactoProductoEdit)

@@ -1,0 +1,34 @@
+{% extends 'app/base.html' %}
+{% block contenido %}
+{% load humanize %}
+<br> <br> <br>
+<div class="card">
+    <div class="card-body">
+        <h2 style="text-align: center;">Mensajes Enviados</h2>
+        <hr>
+        <table class="table table-striped table-hover table-responsive-sm">
+            <tr>
+                <th style="text-align: center;" >Nombre</th>
+                <th style="text-align: center;" >Correo</th>
+                <th style="text-align: center;" >Mensaje</th>   
+                {% if perms.app.view_producto %}          
+                <th style="text-align: center;" >Eliminar</th>
+                {% endif %}
+            </tr>
+            {% for p in entity %}
+            <tr>
+                <td style="text-align: center;" >{{ p.nombre | capfirst }}</td>
+                <td style="text-align: center;" >{{ p.correo  }}</td>
+                <td style="text-align: center;" > {{ p.mensaje | capfirst }}</td>
+                <td style="text-align: center;">
+                    {% if perms.app.view_producto %}
+                    <a  style="text-align: center;" href="{% url 'eliminar_mensaje' p.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div>
+            {% include 'app/paginator.html' %}
+        </div>
+{% endblock %}

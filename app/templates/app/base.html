@@ -31,12 +31,30 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'contacto' %}" style="color: white;">Contacto</a>
               </li>
+              {% if perms.app.view_producto %}  <!-- PARA VER ADMIN -->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'agregar' %}" style="color: white;">Agregar</a>
               </li>
+              {% endif %}
+              {% if perms.app.view_producto %}  <!-- PARA VER ADMIN -->
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'listar' %}" style="color: white;">Listar</a>
+                <a class="nav-link" href="{% url 'listar' %}" style="color: white;">Productos</a>
               </li>
+              {% endif %}
+              {% if perms.app.view_producto %}  <!-- PARA VER ADMIN -->
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'listacontacto' %}" style="color: white;">Mensajes</a>
+              </li>
+              {% endif %}
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link"  href="{% url 'logout' %}" style="color: white;">Cerrar Sesión</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}" style="color: white;">Iniciar</a>
+              </li>
+              {% endif %}
         
 
             </ul>
