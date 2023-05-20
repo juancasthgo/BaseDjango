@@ -17,7 +17,7 @@
 
             </tr>
 
-            {% for p in productos %}
+            {% for p in entity %}
             <tr>
                 <td > {{ p.marca | title }}</td>
                 <td >{{ p.nombre | title }}</td>
@@ -32,5 +32,8 @@
             {% endfor %}
 
         </table>
+        <div>
+            {% include 'app/paginator.html' %}
+        </div>
 
 {% endblock %}
