@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'app',
     'colorfield',
     'django.contrib.humanize',
+    'django_bootstrap5',
 ]
 
 X_FRAME_OPTIONS='SAMEORIGIN'
