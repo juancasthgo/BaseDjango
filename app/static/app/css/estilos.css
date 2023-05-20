@@ -5,7 +5,6 @@
 }
 
 body {
-    background-color:#EDF2F7;
     font-family: Arial, Helvetica, sans-serif
 }
 
@@ -21,7 +20,6 @@ label.error {
 header {
     width: 100%;
     height: 80px;
-    background-color: #2B6CB0;
     /*margin-left: 30px;
     padding-left: 30px;*//*right-top-bottom*/
     display: flex;
@@ -170,7 +168,6 @@ textarea {
 .button {
     padding:5px 10px;
     color: white;
-    background-color: #2B6CB0;
     border: none;
     border-radius: 5px;
 }
