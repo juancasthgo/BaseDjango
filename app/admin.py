@@ -12,7 +12,7 @@ class ProductoAdmin(admin.ModelAdmin):
 
 # MODELO VISUALIZAR CONTACTO.
 class ContactoProductoEdit(admin.ModelAdmin):
-    list_display = ["nombre","correo","tipo_consulta","mensaje"]
+    list_display = ["nombre","correo","mensaje"]
     list_editable = ["mensaje"]
     search_fields = ["correo","nombre"]
     list_per_page =  10

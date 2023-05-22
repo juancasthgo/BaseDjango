@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 # FORMULARIO CONTACTO
 class ContactoForm(forms.ModelForm):
     nombre = forms.CharField(min_length=3, max_length=15) #VALIDACION 1
-    tipo_consulta = forms.CharField(required=True) #VALIDACION 4
     class Meta:
         model = Contacto
         fields = '__all__'
